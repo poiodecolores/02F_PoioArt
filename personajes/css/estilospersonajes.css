@@ -10,12 +10,12 @@
         background-repeat: no-repeat;
         background-size: cover;  
         background-size: center center;
-    
+   
     
         /* Chicas el background-size:100% no, porque ya hay un background-size */
     }
     
- 
+
 main{
     position: relative;
     top: 60px;
@@ -24,6 +24,7 @@ main{
 
 .gallery-container {
     display: flex;
+    /* Modo fila como esta es row o colum en modo vertical */
     flex-direction: row-reverse;
     width: 100%;
     height: 65vh;
@@ -38,7 +39,9 @@ background-repeat: no-repeat;
 background-size: cover;
 transition:  flex 0.5s ease-in-out;
 display: flex;
+/* probar space-between */
 justify-content: center;
+/* centrara verticalmente - stretch ocupa todo -baseline alinea la base d elos elementos */
 align-items: center;
 
 }
@@ -102,7 +105,10 @@ align-items: center;
   .gallery{
     width:100%;
     display:flex;
-    flex-flow: row wrap;
+    /* Es una propiedad de atajo para las propiedades infividuales flex-direction
+    y flex-wrap (por defecto esta no wrap) ya que si no caben los div saltaran a la siguiente fila
+    hacer prueba con column  */
+    /* flex-flow: row wrap; */
     justify-content: center;
     align-content: center;
     font-size: 30px;
@@ -121,13 +127,16 @@ align-items: center;
   .gallery_image-caption{
     margin-top:1rem;
     font-size:0.95rem;
+    
   }
   .gallery_image{
     width:100%;
+    height: 50%;
     display:block;
+ 
   }
   
-  @media only screen and (min-width: 33.75em){
+  /* @media only screen and (min-width: 33.75em){
     .gallery_item{
       flex-basis: calc(50% - 2rem);
     }
@@ -143,7 +152,7 @@ align-items: center;
     .gallery_item{
       flex-basis: calc((100% / 4) - 2rem);
     }
-  }
+  } */
 
   .content-five{
     width: 100%;
